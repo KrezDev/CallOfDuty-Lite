@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 105
+  controlID: 51
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -474,7 +474,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b0faffffe07f0000
+      m_ExpandedIDs: b0faffff667f0000967f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1134,9 +1134,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 36.337772, y: 16.666306, z: -3.745757}
+    m_Target: {x: -6.105429, y: 0.97051436, z: -3.9465675}
     speed: 2
-    m_Value: {x: 36.337772, y: 16.666306, z: -3.745757}
+    m_Value: {x: -6.105429, y: 0.97051436, z: -3.9465675}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1182,9 +1182,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.24555498, y: -0.5806228, z: 0.18938242, w: 0.7527618}
+    m_Target: {x: 0.23043974, y: -0.33195335, z: 0.0839955, w: 0.9108023}
     speed: 2
-    m_Value: {x: 0.24556284, y: -0.5806414, z: 0.18938848, w: 0.75278586}
+    m_Value: {x: 0.22908337, y: -0.33209366, z: 0.08350125, w: 0.91118723}
   m_Size:
     m_Target: 1.2247449
     speed: 2
@@ -1266,7 +1266,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Mats
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1276,16 +1276,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Mats
+  - Assets/Scripts
   m_LastFoldersGridSize: 64
   m_LastProjectPath: D:\UnityProjects\Jams\MM7 Challenge\CallOfDuty-Lite\CallOfDuty(Lite)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 72810000
-    m_LastClickedID: 33138
-    m_ExpandedIDs: 00000000d480000000ca9a3b
+    scrollPos: {x: 0, y: 36}
+    m_SelectedIDs: 76810000
+    m_LastClickedID: 33142
+    m_ExpandedIDs: 00000000d4800000768100007a810000c8840000cc840000d28400000686000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300001a6100008e65000020780000866800009a6e000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

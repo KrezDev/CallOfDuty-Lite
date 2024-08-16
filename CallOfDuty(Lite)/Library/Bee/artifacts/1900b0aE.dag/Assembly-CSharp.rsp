@@ -401,6 +401,8 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.3f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/Mouse Look.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Walls/PlayerPoints.cs"
+"Assets/Scripts/Walls/WallItem.cs"
 "Assets/Scripts/Zombie/ZombieController.cs"
 -langversion:9.0
 /deterministic
