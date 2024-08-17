@@ -1,9 +1,8 @@
-using UnityEditor;
 using UnityEngine;
 
 public class WallItem : MonoBehaviour
 {
-    public string itemName = "WeaponName";
+    public string itemName = "Box";
     public int itemCost = 1000;
     public GameObject itemPrefab;
 
@@ -12,10 +11,19 @@ public class WallItem : MonoBehaviour
 
     void Start()
     {
+        if (itemPrefab != null)
+        {
+            itemPrefab.SetActive(false);
+        }
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             playerPoints = player.GetComponent<PlayerPoints>();
+            if (playerPoints == null)
+            {
+                Debug.LogError("PlayerPoints component not found on Player object.");
+            }
         }
         else
         {
@@ -33,15 +41,27 @@ public class WallItem : MonoBehaviour
 
     void TryBuyItem()
     {
-        if (playerPoints != null && playerPoints.currentPoints >= itemCost)
+        if (playerPoints != null)
         {
-            playerPoints.SpendPoints(itemCost);
-            itemPrefab.SetActive(true);
-            Debug.Log(itemName + " purchased!");
+            if (playerPoints.currentPoints >= itemCost)
+            {
+                playerPoints.SpendPoints(itemCost);
+
+                if (itemPrefab != null)
+                {
+                    itemPrefab.SetActive(true);
+                }
+
+                Debug.Log(itemName + " purchased and enabled!");
+            }
+            else
+            {
+                Debug.Log("Not enough points to buy " + itemName);
+            }
         }
         else
         {
-            Debug.Log("Not enough points to buy " + itemName);
+            Debug.LogError("PlayerPoints reference is missing.");
         }
     }
 

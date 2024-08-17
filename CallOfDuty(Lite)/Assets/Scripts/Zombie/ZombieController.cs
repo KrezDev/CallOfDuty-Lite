@@ -9,7 +9,16 @@ public class SimpleZombieController : MonoBehaviour
     public int health = 100;
     public int damage = 10;
 
+    public float attackCooldown = 2f;
+
     private bool isDead = false;
+    private float attackTimer = 0f;
+    private PlayerHealth playerHealth;
+
+    void Start()
+    {
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
 
     void Update()
     {
@@ -20,12 +29,18 @@ public class SimpleZombieController : MonoBehaviour
 
         if (distanceToPlayer <= attackRange)
         {
-            AttackPlayer();
+            if (attackTimer <= 0f)
+            {
+                AttackPlayer();
+                attackTimer = attackCooldown;
+            }
         }
         else if (distanceToPlayer <= detectionRange)
         {
             MoveTowardsPlayer();
         }
+
+        attackTimer -= Time.deltaTime;
     }
 
     void MoveTowardsPlayer()
@@ -40,6 +55,11 @@ public class SimpleZombieController : MonoBehaviour
     void AttackPlayer()
     {
         Debug.Log("Zombie attacks player!");
+
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+        }
     }
 
     public void TakeDamage(int damage)
