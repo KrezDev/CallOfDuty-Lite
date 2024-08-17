@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class WallItem : MonoBehaviour
@@ -5,7 +6,6 @@ public class WallItem : MonoBehaviour
     public string itemName = "WeaponName";
     public int itemCost = 1000;
     public GameObject itemPrefab;
-    public Transform cameraItemHolder;
 
     private PlayerPoints playerPoints;
     private bool isPlayerInRange = false;
@@ -16,11 +16,6 @@ public class WallItem : MonoBehaviour
         if (player != null)
         {
             playerPoints = player.GetComponent<PlayerPoints>();
-            cameraItemHolder = player.GetComponentInChildren<Camera>().transform.Find("WeaponHolder");
-            if (cameraItemHolder == null)
-            {
-                Debug.LogError("Camera item holder not found! Ensure there is a child object named 'WeaponHolder' in the camera.");
-            }
         }
         else
         {
@@ -41,24 +36,12 @@ public class WallItem : MonoBehaviour
         if (playerPoints != null && playerPoints.currentPoints >= itemCost)
         {
             playerPoints.SpendPoints(itemCost);
-            GiveItemToPlayer();
+            itemPrefab.SetActive(true);
             Debug.Log(itemName + " purchased!");
         }
         else
         {
             Debug.Log("Not enough points to buy " + itemName);
-        }
-    }
-
-    void GiveItemToPlayer()
-    {
-        if (cameraItemHolder != null)
-        {
-            GameObject item = Instantiate(itemPrefab, cameraItemHolder.position, cameraItemHolder.rotation);
-            item.transform.SetParent(cameraItemHolder); 
-            item.transform.localPosition = Vector3.zero;
-            item.transform.localRotation = Quaternion.identity; 
-
         }
     }
 
