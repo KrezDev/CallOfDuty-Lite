@@ -371,6 +371,7 @@
 -r:"Library/PackageCache/com.unity.ext.nunit/net40/unity-custom/nunit.framework.dll"
 -r:"Library/PackageCache/com.unity.testtools.codecoverage/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"Library/PackageCache/com.unity.visualscripting/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/SimpleFolderIcon.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
@@ -407,7 +408,7 @@
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/Walls/PlayerPoints.cs"
 "Assets/Scripts/Walls/WallItem.cs"
-"Assets/Scripts/Zombie/ZombieController.cs"
+"Assets/Scripts/zombie/ZombieController.cs"
 -langversion:9.0
 /deterministic
 /optimize+
