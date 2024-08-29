@@ -13,7 +13,7 @@ Advanced AI: Intelligent AI opponents in single-player and co-op modes, providin
 Graphics and Sound: Cutting-edge graphics and immersive sound design to enhance the overall gaming experience.
 
 Development Status
-Current Phase: [e.g., Alpha/Beta/Pre-Production]
+Current Phase: In The Development
 Features Completed: Basic movement system, initial maps, core gameplay mechanics.
 In Progress: Development of additional maps, new game modes, and advanced AI.
 Upcoming Milestones: Feature-complete version, closed alpha testing, community feedback integration.
